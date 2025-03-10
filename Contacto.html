@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Contacto - Taller Automotriz</title>
+</head>
+<body>
+    <header>
+        <img src="/Img/logo for performance car-PNG.png" alt="Logo del Taller" class="logo">
+        <!-- Botón de hamburguesa -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Menú de navegación -->
+        <nav class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="Servicios.html">Servicios</a>
+            <a href="Agendar.html">Agendar</a>
+            <a href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <img src="/Img/logo for performance car-PNG.png" alt="Logo" class="logoFormu">
+        <form class="contact-form">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido *</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="membresia">Número de Membresía</label>
+            <input type="text" id="membresia" name="membresia">
+
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="ayuda">¿Cómo podemos ayudarte? *</label>
+            <select id="ayuda" name="ayuda" required>
+                <option value="">--</option>
+                <option value="consulta">Consulta</option>
+                <option value="soporte">Soporte</option>
+                <option value="reclamo">Reclamo</option>
+            </select>
+
+         
+            <label for="detalle">Detalle *</label>
+            <textarea id="detalle" name="detalle" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="chat-support">
+            <h2>El soporte de chat está disponible</h2>
+            <p><strong>Nuestro horario de atención es de:</strong></p>
+            <p>Lunes - Sábado: 8:00AM - 6:00PM</p>
+            <p id="fecha-actual"></p>
+        </div>
+    </div>
+
+      
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Taller Automotriz. Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="#" class="social-icon" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Términos de Servicio</a> | 
+                <a href="#">Política de Privacidad</a> | 
+                <a href="#">Ayuda</a>
+            </div>
+            
+        </div>
+    </footer>
+    
+
+    <script src="Contacto.js"></script>
+</body>
+</html>
+

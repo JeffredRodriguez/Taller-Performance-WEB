@@ -1,0 +1,335 @@
+/* Reset de estilos y fuente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Estilos generales del header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    width: 90px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Menú de navegación (Laptop) */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #cc0000;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.menu a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.menu a:hover {
+    background: rgba(204, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+
+
+/* Banner principal */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: url('Img/Banner\ Servicios.png') center/cover no-repeat;
+
+    text-align: center;
+    color: white;
+    padding: 80px;
+    position: relative;
+    margin: 95px 0px;
+}
+
+.intro-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.intro h1 {
+    font-size: 2.0rem;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    background: #cc0000;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #990000;
+    transform: scale(1.05);
+}
+
+
+/* Sección de servicios */
+.services {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Diseño de cardservicio */
+.service {
+    flex: 1 1 calc(50% - 30px);
+    border-left: 5px solid #cc0000;
+    padding: 30px 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service:hover {
+    background: #f9f9f9;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Iconos */
+.service-icon {
+    font-size: 3em;
+    color: #cc0000;
+    transition: transform 0.3s ease;
+}
+
+.service:hover .service-icon {
+    transform: scale(1.1);
+}
+
+/* Contenido del servicio */
+.service-content h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.service-content p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    opacity: 0.8;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+
+
+
+/* Estilos Footer*/
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px 10px;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    width: auto;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.footer-links {
+    font-size: 14px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #cc0000;
+}
+
+/* Estilo de iconos sociales */
+.footer-social {
+    display: flex;
+    gap: 15px;
+   
+}
+
+.social-icon {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 0px 25px;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #cc0000;
+}
+
+/* Botón de hamburguesa (oculto en escritorio) */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; 
+    }
+
+    .menu {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: black;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .menu.show {
+        display: flex; 
+    }
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .footer-links a {
+        margin: 5px 0;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .service {
+        flex: 1 1 100%;
+    }
+
+    .intro h1 {
+        font-size: 2.4em;
+    }
+
+    .intro p {
+        font-size: 1.2em;
+    }
+
+    .intro .header-btn {
+        font-size: 1.1em;
+        padding: 12px 28px;
+    } 
+
+}}

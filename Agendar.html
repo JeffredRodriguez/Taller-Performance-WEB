@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - Taller Automotriz</title>
+    <link rel="stylesheet" href="Agendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <img src="/Img/logo for performance car-PNG.png" alt="Logo del Taller" class="logo">
+        <!-- Botón de hamburguesa -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Menú de navegación -->
+        <nav class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="Servicios.html">Servicios</a>
+            <a href="Agendar.html">Agendar</a>
+            <a href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+<!-- Tabla de horario -->
+    <h2 >Agendar Cita</h2>
+
+    <div class="fecha-container">
+        <label for="fechaCita">Seleccione una fecha:</label>
+        <input type="date" id="fechaCita" onchange="cargarCitas()">
+    </div>
+    
+    <div class="contenedor">
+        <div class="tabla-container">
+            <h3>Horarios disponibles</h3>
+            <table id="tablaCitas">
+                <tr>
+                    <th>Hora</th>
+                    <th>Estado</th>
+                </tr>
+            </table>
+        </div>
+
+
+
+         <!-- Formulario de citas  -->
+        <div class="form-container">
+            <h3>Datos del Cliente</h3>
+            <form id="formCita">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+                
+                <label>Apellido:</label>
+                <input type="text" id="apellido" required>
+
+                <label>Teléfono:</label>
+                <input type="tel" id="telefono" required>
+
+                <label>Correo Electrónico:</label>
+                <input type="email" id="correo" required>
+
+                <label>Modelo del Auto:</label>
+                <input type="text" id="modeloAuto" required>
+
+                <label>Año del Auto:</label>
+                <input type="number" id="anioAuto" min="1900" max="2025" required>
+
+                <label>Detalle:</label>
+                <textarea id="detalle"></textarea>
+
+                <button type="button" id="btnConfirmar" disabled onclick="mostrarPopupPago()">Realizar Pago</button>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+<!-- Popup de pago (Simulación) -->
+<div id="popupPago" class="popup">
+    <div class="popup-content">
+        <h3>Pago con Tarjeta</h3>
+
+        <label for="tipoTarjeta">Tipo de Tarjeta:</label>
+        <select id="tipoTarjeta">
+            <option value="Visa">Visa</option>
+            <option value="MasterCard">MasterCard</option>
+            <option value="AmericanExpress">American Express</option>
+            <option value="Discover">Discover</option>
+        </select>
+
+        <label for="numeroTarjeta">Número de Tarjeta:</label>
+        <input type="text" id="numeroTarjeta" maxlength="16" placeholder="1234 5678 1234 5678">
+        <label for="nombreTarjeta">Nombre en la Tarjeta:</label>
+        <input type="text" id="nombreTarjeta">
+        <label for="vencimientoTarjeta">Fecha de Vencimiento:</label>
+        <input type="month" id="vencimientoTarjeta">
+        <label for="cvvTarjeta">CVV:</label>
+        <input type="text" id="cvvTarjeta" maxlength="3" placeholder="123">
+
+       
+        <div class="popup-actions">
+            <button onclick="procesarPago()">Confirmar Pago</button>
+            <button class="cerrar" onclick="cerrarPopup()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer General -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Taller Automotriz. Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="#" class="social-icon" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Términos de Servicio</a> | 
+                <a href="#">Política de Privacidad</a> | 
+                <a href="#">Ayuda</a>
+            </div>
+            
+        </div>
+    </footer>
+    
+
+    <script src="Agendar.js"></script>
+
+</body>
+</html>
