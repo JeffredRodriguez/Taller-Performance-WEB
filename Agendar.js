@@ -127,6 +127,7 @@ function procesarPago() {
     // Registrar la cita y cerrar el popup
     registrarCita();
     cerrarPopup();
+    limpiarFormulario();
 }
 
 
@@ -144,6 +145,7 @@ function registrarCita() {
 
     // Recargar la vista de citas
     cargarCitas();
+    limpiarFormulario()
 }
 
 
@@ -151,4 +153,25 @@ function registrarCita() {
 function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('show');
+}
+
+function limpiarFormulario() {
+    // Limpiar campos del formulario
+    document.getElementById("nombre").value = "";
+    document.getElementById("apellido").value = "";
+    document.getElementById("telefono").value = "";
+    document.getElementById("correo").value = "";
+    document.getElementById("modeloAuto").value = "";
+    document.getElementById("anioAuto").value = "";
+    document.getElementById("detalle").value = "";
+
+    // Deshabilitar el botón de confirmar
+    document.getElementById("btnConfirmar").disabled = true;
+
+    // Limpiar selección de horario
+    if (filaSeleccionada) {
+        filaSeleccionada.style.backgroundColor = ""; // Quitar resaltado
+    }
+    horarioSeleccionado = null;
+    filaSeleccionada = null;
 }

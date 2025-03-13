@@ -198,7 +198,16 @@ header {
     margin-bottom: 30px;
     color: #cc0000;
 }
+.map {
+    width: 80%;
+    padding: 0 0px; /* Añadir un poco de padding */
+}
 
+.map iframe {
+    width: 100%;
+    height: 450px; /* Altura reducida para móviles */
+    border-radius: 10px; /* Bordes redondeados */
+}
 
 
 /*Icono whatsapp flotante*/

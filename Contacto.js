@@ -40,3 +40,13 @@ function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('show');
 }
+
+function limpiarFormulario() {
+    document.getElementById("nombre").value = "";
+    document.getElementById("apellido").value = "";
+    document.getElementById("membresia").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("ayuda").value = "";
+    document.getElementById("detalle").value = "";
+}
+
