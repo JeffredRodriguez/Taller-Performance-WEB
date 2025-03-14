@@ -58,3 +58,28 @@ function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('show');
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const whatsappFloat = document.querySelector(".whatsapp-float");
+    const footer = document.querySelector("footer");
+
+    function ajustarPosicionWhatsApp() {
+        const footerRect = footer.getBoundingClientRect();
+        const distanciaDesdeElFooter = window.innerHeight - footerRect.top;
+
+        if (distanciaDesdeElFooter > 0) {
+            // Si el footer está visible, ajusta la posición del logo
+            whatsappFloat.style.bottom = `${distanciaDesdeElFooter + 20}px`;
+        } else {
+            // Si el footer no está visible, restablece la posición original
+            whatsappFloat.style.bottom = "20px";
+        }
+    }
+
+    // Ajustar la posición al cargar la página y al hacer scroll
+    window.addEventListener("scroll", ajustarPosicionWhatsApp);
+    window.addEventListener("resize", ajustarPosicionWhatsApp);
+    ajustarPosicionWhatsApp(); // Llamar inicialmente
+});

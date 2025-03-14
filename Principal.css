@@ -210,7 +210,6 @@ header {
 }
 
 
-/*Icono whatsapp flotante*/
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -223,7 +222,8 @@ header {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
 
 .whatsapp-float img {
@@ -452,6 +452,8 @@ footer {
     text-align: center;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-content {
@@ -504,7 +506,6 @@ footer {
     transform: scale(1.2);
     color: #cc0000;
 }
-
 
 
 
