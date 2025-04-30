@@ -99,7 +99,7 @@ header {
 /* Formulario de citas */
 .form-container {
     order: 1;
-    flex: 0.4; /* Ocupa el 40% */
+    flex: 0.4; 
     background-color: #fff;
     padding: 15px;
     border-radius: 12px;
@@ -472,7 +472,7 @@ footer {
 
 /* Botón de hamburguesa (oculto en escritorio) */
 .hamburger {
-    display: none; /* Oculto por defecto */
+    display: none; 
     flex-direction: column;
     cursor: pointer;
 }
@@ -489,7 +489,7 @@ footer {
 /* Estilos para móviles */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Mostrar el botón de hamburguesa en móviles */
+        display: flex;
     }
 
     .menu {

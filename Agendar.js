@@ -170,7 +170,7 @@ function limpiarFormulario() {
 
     // Limpiar selección de horario
     if (filaSeleccionada) {
-        filaSeleccionada.style.backgroundColor = ""; // Quitar resaltado
+        filaSeleccionada.style.backgroundColor = ""; 
     }
     horarioSeleccionado = null;
     filaSeleccionada = null;

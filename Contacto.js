@@ -24,15 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (nombre === "" || apellido === "" || email === "" || ayuda === "") {
             alert("Por favor, completa todos los campos obligatorios.");
-            event.preventDefault();  // Evita el envío solo si faltan campos
+            event.preventDefault();  
             return;
         }
 
-        // Si todo está correcto, mostrar un mensaje 
+        // Si todo está correcto, mostrar el mensaje 
         alert("Formulario enviado con éxito. Nos pondremos en contacto contigo pronto.");
         // No hago reset aquí porque Formspree recarga la página después de enviar
     });
 });
+
 
 
 // Función para mostrar/ocultar el menú en móviles
