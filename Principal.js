@@ -27,7 +27,7 @@ function abrirWhatsApp() {
 
 
 
-//Cards de Trabajos
+//Cards 
 document.querySelectorAll('.gallery-item').forEach(item => {
     const sliderImages = item.querySelector('.slider-images');
     const images = sliderImages.querySelectorAll('img');

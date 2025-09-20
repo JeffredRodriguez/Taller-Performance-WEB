@@ -440,9 +440,9 @@ footer {
     color: #cc0000;
 }
 
-/* Botón de hamburguesa (oculto en escritorio) */
+/* Botón de hamburguesa */
 .hamburger {
-    display: none; 
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
@@ -454,6 +454,7 @@ footer {
     margin: 4px 0;
     transition: 0.4s;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -490,11 +491,9 @@ footer {
         position: absolute;
         top: 70px;
         left: 0;
-        right: 0;
         background: black;
-        width: 100vw;
+        width: 100%;
         z-index: 999;
-        padding: 15px 0;
     }
 
     .menu.show {
